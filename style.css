@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.ALL {
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 40vh 10vh 40vh;
+  grid-template-columns: 40vw 10vw 40vw;
+  grid-area: 
+    "feu1 feu2 feu3"
+    "feu4 feu5 feu6"
+    "feu7 feu8 feu9";
+
+}
+
+#feu1 {
+  grid-area: feu1;
+}
+
+
+
+.feu-ensemble {
+  width: 6rem;
+  height: 11rem;
+  background-color: #2c2c2c;
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(150, 150, 150, 0.35) 0.09rem 0.4rem 1rem;
+
+}
+
+:root {
+  --feu-width: 2.5rem;
+  --feu-height: 2.5rem;
+  --feu-border-radius: 50%;
+  --feu-opacity: 0.1;
+}
+
+.feu {
+  width: var(--feu-width);
+  height: var(--feu-height);
+  border-radius: var(--feu-border-radius);
+  border: 1px solid;
+  border-color: white;
+  opacity: var(--feu-opacity);
+  /* animation: 0.2s feu-cycle infinite; */
+}
+
+.rouge {
+  background-color: rgb(204, 0, 0);
+  animation: 12s feu-rouge infinite step-end;
+}
+
+.orange {
+  background-color: rgb(201, 134, 1);
+  animation: 12s feu-orange infinite step-end;
+}
+
+.vert {
+  background-color: rgb(0, 167, 0);
+  animation: 12s feu-vert infinite step-end;
+}
+/* =====================Hover===================== */
+
+.feu:hover {
+  opacity: 1;
+}
+
+/* =====================FIN Hover===================== */
+
+/* =====================Animation===================== */
+
+@keyframes feu-rouge {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes feu-orange {
+  0% {
+    opacity: 0.1;
+  }
+  35% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes feu-vert {
+  0% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+/* =================== FIN Animation===================== */
+
+/* ==================== ROUTE ANIMATION===================== */
+
+.rouge2 {
+  background-color: rgb(204, 0, 0);
+  animation: 12s feu-rouge2 infinite step-end;
+}
+
+.orange2 {
+  background-color: rgb(201, 134, 1);
+  animation: 12s feu-orange2 infinite step-end;
+}
+
+.vert2 {
+  background-color: rgb(0, 167, 0);
+  animation: 12s feu-vert2 infinite step-end;
+}
+
+@keyframes feu-rouge2 {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes feu-orange2 {
+  0% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes feu-vert2 {
+  0% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
