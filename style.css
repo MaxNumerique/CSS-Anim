@@ -3,23 +3,96 @@
   padding: 0;
 }
 
+
+/* =====================GRID===================== */
+
 .ALL {
   display: grid;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  grid-template-rows: 40vh 10vh 40vh;
-  grid-template-columns: 40vw 10vw 40vw;
-  grid-area: 
-    "feu1 feu2 feu3"
-    "feu4 feu5 feu6"
-    "feu7 feu8 feu9";
-
+  grid-template-rows: 45vh 10vh 45vh;
+  grid-template-columns: 45vw 10vw 45vw;
+  grid-template-areas:
+    "feu1 feu5 feu3"
+    "feu6 feu7 feu8"
+    "feu4 feu9 feu2";
+  background-color: #242424;
+  
 }
+
+.route1 {
+  background-color: #1a1a1a;
+  width: 100%;
+  height: 100%;
+  grid-row: 1 / span 3;
+  grid-column: 2 / span 1;
+}
+
+.route2 {
+  background-color: #1a1a1a;
+  width: 100%;
+  height: 100%;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 3;
+}
+
 
 #feu1 {
   grid-area: feu1;
+  transform: rotate(180deg);
+  justify-self: end;
+  align-self: end;
+  margin: 0 45px  25px 0;
 }
+
+#feu2 {
+  grid-area: feu2;
+  justify-self: start;
+  align-self: start;
+  margin: 25px 0 0 45px;
+
+}
+
+#feu3 {
+  grid-area: feu3;
+  transform: rotate(270deg);
+  justify-self: start;
+  align-self: end;
+  margin: 0 0 0px 65px;
+}
+
+#feu4 {
+  grid-area: feu4;
+  transform: rotate(90deg);
+  justify-self: end;
+  align-self: start;
+  margin-right: 65px;
+}
+
+
+/* =====================FIN GRID===================== */
+
+/* ==================== VOITURE ANIMATION===================== */
+
+.route1 img, .route2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.voiture {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+
+
+
+
+
+
+
+/* ====================FIN VOITURE ANIMATION===================== */
 
 
 
@@ -27,7 +100,6 @@
   width: 6rem;
   height: 11rem;
   background-color: #2c2c2c;
-  margin: 2rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,4 +286,5 @@
     opacity: 1;
   }
 }
+
 
