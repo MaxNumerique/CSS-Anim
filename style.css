@@ -3,10 +3,17 @@
   padding: 0;
 }
 
+:root {
+  --feu-width: 2.5rem;
+  --feu-height: 2.5rem;
+  --feu-border-radius: 50%;
+  --feu-opacity: 0.1;
+}
+
 
 /* =====================GRID===================== */
 
-.ALL {
+.all {
   display: grid;
   height: 100vh;
   justify-content: center;
@@ -18,6 +25,7 @@
     "feu6 feu7 feu8"
     "feu4 feu9 feu2";
   background-color: #242424;
+  z-index: 2;
   
 }
 
@@ -27,7 +35,11 @@
   height: 100%;
   grid-row: 1 / span 3;
   grid-column: 2 / span 1;
+  display: grid;
+  /* z-index: 2; */
+  /* position: relative; */
 }
+
 
 .route2 {
   background-color: #1a1a1a;
@@ -35,6 +47,9 @@
   height: 100%;
   grid-row: 2 / span 1;
   grid-column: 1 / span 3;
+  display: grid;
+  /* z-index: 2; */
+  position: relative;
 }
 
 
@@ -85,6 +100,37 @@
   height: 2.7rem;
 }
 
+.bleu{
+  /* transform: rotate(90deg); */
+  /* margin-top: 40vh; */
+  animation: 12s voiture-bleu infinite linear ;
+  z-index: 1;
+  position: relative;
+}
+
+.green {
+  /* transform: rotate(90deg); */
+  /* align-self: right; */
+  justify-self: right;
+  /* margin-top: 10vh; */
+  animation: 12s voiture-green infinite linear;
+  z-index: 1;
+
+}
+
+.jaune {
+  justify-self: right;
+  margin-right: 42vw;
+  animation: 12s voiture-jaune infinite step-end;
+  z-index: 1;
+
+}
+
+.red {
+  margin-left: 42vw;
+  animation: 12s voiture-red infinite step-end;
+  z-index: 1;
+}
 
 
 
@@ -110,12 +156,7 @@
 
 }
 
-:root {
-  --feu-width: 2.5rem;
-  --feu-height: 2.5rem;
-  --feu-border-radius: 50%;
-  --feu-opacity: 0.1;
-}
+
 
 .feu {
   width: var(--feu-width);
@@ -214,10 +255,6 @@
   }
 }
 
-/* =================== FIN Animation===================== */
-
-/* ==================== ROUTE ANIMATION===================== */
-
 .rouge2 {
   background-color: rgb(204, 0, 0);
   animation: 12s feu-rouge2 infinite step-end;
@@ -287,4 +324,74 @@
   }
 }
 
+
+
+/* =================== FIN Animation===================== */
+
+/* ==================== ROUTE ANIMATION===================== */
+
+@keyframes voiture-bleu {
+  0% {
+    transform: translateY(40vh);
+  }
+  22% {
+    transform: translateY(40vh);
+  }
+  40% {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  41% {
+    transform: translateY(-1000vh);
+    opacity: 0;
+  }
+  42% {
+    transform: translateY(0vh);
+    opacity: 0;
+  }
+  43% {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(40vh);
+  }
+  100% {
+    transform: translateY(40vh);
+  }
+}
+
+@keyframes voiture-green {
+  0% {
+    transform: translateY(5vh);
+  }
+  22% {
+    transform: translateY(5vh);
+  }
+  40% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  41% {
+    transform: translateY(1000vh);
+    opacity: 0;
+  }
+  42% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  43% {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(5vh);
+  }
+  100% {
+    transform: translateY(5vh);
+  }
+}
+
+
+/* =================== FIN ROUTE ANIMATION===================== */
 
